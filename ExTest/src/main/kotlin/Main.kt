@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
 }
 
 private fun checkNumberSort(value: String): Boolean {
-    val pattern = Pattern.compile("^0*1*2*3*4*5*6*7*8*9*\$")
+    val pattern = Pattern.compile("^(?:(?:\\d)+\\s)*(?:(?:1*2*3*4*5*6*7*8*9*)|(?:9*8*7*6*5*4*3*2*1*))\$")
     return pattern.matcher(value).matches()
 }
 
